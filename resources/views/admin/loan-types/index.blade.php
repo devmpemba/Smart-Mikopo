@@ -40,16 +40,16 @@
                             <td>{{ $loan->created_at }}</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info">
-                                    <i class="mdi mdi-eye"></i> View
+                                    <i class="mdi mdi-eye"></i>
                                 </a>
                                 <a href="#" class="btn btn-sm btn-primary">
-                                    <i class="mdi mdi-pencil"></i> Edit
+                                    <i class="mdi mdi-pencil"></i>
                                 </a>
                                 <form action="#" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this group?')">
-                                        <i class="mdi mdi-delete"></i> Delete
+                                        <i class="mdi mdi-delete"></i>
                                     </button>
                                 </form>
                             </td>

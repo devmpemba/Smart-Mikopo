@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Validator;
+
+
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -43,6 +46,21 @@ class RouteServiceProvider extends ServiceProvider
         Route::bind('member', function ($value) {
             return \App\Models\Members::findOrFail(decrypt($value));
         });
+
+        Route::bind('group', function ($value) {
+            return \App\Models\Groups::findOrFail(decrypt($value));
+        });
+
+        Validator::extend('valid_interest_rate', function ($attribute, $value, $parameters, $validator) {
+           
+            return is_numeric($value) && $value >= 0; // Modify this condition based on your requirements
+        });
+    
+        Validator::extend('valid_penalty_rate', function ($attribute, $value, $parameters, $validator) {
+        
+            return is_numeric($value) && $value >= 0; // Modify this condition based on your requirements
+        });
+
 
         parent::boot();
     }

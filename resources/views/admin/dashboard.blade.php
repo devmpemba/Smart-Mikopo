@@ -6,7 +6,7 @@
     <div class="content-wrapper">
       <div class="d-xl-flex justify-content-between align-items-start">
         <h2 class="text-dark font-weight-bold mb-2"> Overview dashboard </h2>
-{{--         
+        
         <div class="d-sm-flex justify-content-xl-between align-items-center mb-2">
           <div class="btn-group bg-white p-3" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-link text-gray py-0 border-right">7 Days</button>
@@ -24,7 +24,7 @@
               <a class="dropdown-item" href="#">Separated link</a>
             </div>
           </div>
-        </div> --}}
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">

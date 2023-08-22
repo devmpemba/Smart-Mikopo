@@ -2,90 +2,84 @@
 
 @section('content')
 
+<style>
+    .custom-form {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 16px;
+    }
+</style>
+
+<br>
+  <br>
+   <br> 
+     <br>
+
+<h1 class="text-center text-white">Smart Loans - LMS</h1>
+
 <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="custom-form">
+                <h2 class="text-center">Login</h2>
 
-<div class="login-box">
-    <div class="login-logo">
-      <p><b>Smart</b> Loans | LMS</p>
-    </div>
-  
-    <!-- /.login-logo -->
-    <div class="card">
-      <div class="card-body login-card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-  
-        <form action="{{ route('login') }}" method="POST">
-            @csrf
+                <br>
 
-          <div class="input-group mb-4">
-            
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                <form action="{{ route('login') }}" method="POST">
+
+                  @csrf
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control" placeholder="Email Address">
 
             @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-            
-          </div>
+                    </div>
 
-          <div class="input-group mb-4">
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                    <br>
+                    <div class="form-group">
+                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" class="form-control" placeholder="Password">
 
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
+                      @error('password')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
+                    </div>
 
-          <div class="row">
-            <div class="col-8">
-              <div class="icheck-primary">
-                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <br>
 
-                <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-              </div>
+                    <div class="form-group d-flex justify-content-between align-items-center">
+                      <button type="submit" class="btn btn-primary">
+                          {{ __('Login') }}
+                      </button>
+                      <p class="text-end m-0">Not yet Registered? <a href="{{ route('register') }}">Create Account</a></p>
+                  </div>
+                  
+
+                   
+                </form>
             </div>
-            <!-- /.col -->
-            <div class="col-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Login') }}
-                </button>
-            </div>
-            <!-- /.col -->
-          </div>
-        </form>
-  
-       
-        <!-- /.social-auth-links -->
-  
-        <p class="mb-1">
-            @if (Route::has('password.request'))
-            <a class="btn btn-link" href="{{ route('password.request') }}">
-                {{ __('Forgot Your Password?') }}
-            </a>
-        @endif
-        </p>
-        <p class="mb-0">
-          <a href="{{ route('register') }}" class="text-center">Not yet Registered? Create Account</a>
-        </p>
-      </div>
-      <!-- /.login-card-body -->
+        </div>
     </div>
-  </div>
-  <!-- /.login-box -->
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center">
+            <ul class="header-social wthree">
+                <li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center">
+            <span style="color: white;">&copy; 2023 Smart Loans | LMS</span>
+            <p><a target="_blank" href="#">Developed by Mpemba Technologies</a></p>
+        </div>
+    </div>
 </div>
-  
+
 @endsection
