@@ -1,90 +1,106 @@
 @extends('layouts.app')
 
 @section('content')
+
+<style>
+    .custom-form {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 16px;
+    }
+</style>
+
+<br>
+  <br>
+   <br> 
+     <br>
+
+<h1 class="text-center text-white">Smart Loans - LMS</h1>
+
 <div class="container">
-    <div class="register-box">
-        <div class="register-logo">
-          <h3>Register - Smart Loans</h3>
-        </div>
-      
-        <div class="card">
-          <div class="card-body register-card-body">
-            <p class="login-box-msg">Register a new membership</p>
-      
-            <form action="{{ route('register')}}" method="POST">
-                @csrf
-              <div class="input-group mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="custom-form">
+                <h2 class="text-center">Create Account</h2>
 
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Name" autofocus>
+                <br>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <span class="fas fa-user"></span>
-                  </div>
-                </div>
+                <form action="{{ route('register') }}" method="POST">
 
-                
+                  @csrf
 
-              </div>
-              <div class="input-group mb-3">
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email Address">
+                    <div class="form-group">
+                      <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Name" autofocus>
 
-                @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <span class="fas fa-envelope"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="input-group mb-3">
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+                      @error('name')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
+                    </div>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <span class="fas fa-lock"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="input-group mb-3">
+                    <br>
+
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control" placeholder="Email Address">
+
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" class="form-control" placeholder="Password">
+
+                      @error('password')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Re-type Password">
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <span class="fas fa-lock"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
                
-                <div class="col-4">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Register') }}
-                    </button>
-                </div>
-                <!-- /.col -->
-              </div>
-            </form>
-      
-          
-      
-            <a href="{{ route('login')}}" class="text-center">Already Registered? Login here</a>
-          </div>
-          <!-- /.form-box -->
-        </div><!-- /.card -->
-      </div>
-      <!-- /.register-box -->
+                    </div>
+
+                    <br>
+
+                    <div class="form-group d-flex justify-content-between align-items-center">
+                      <button type="submit" class="btn btn-primary">
+                          {{ __('Create Account') }}
+                      </button>
+                      <p class="text-end m-0">Already Registered? <a href="{{ route('login') }}">Sign In</a></p>
+                  </div>
+                  
+
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center">
+            <ul class="header-social wthree">
+                <li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center">
+            <span style="color: white;">&copy; 2023 Smart Loans | LMS</span>
+            <p><a target="_blank" href="#">Developed by Mpemba Technologies</a></p>
+        </div>
+    </div>
 </div>
+
 @endsection

@@ -6,11 +6,11 @@
    <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
-        <h3 class="page-title">All Registered Groups </h3>
+        <h3 class="page-title">All  Loan Plans </h3>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <button class="btn btn-primary" onclick="redirectToCreatePage()">
-                New Group
+            Create New
             </button>
           </ol>
         </nav>
@@ -25,23 +25,26 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Capacity</th>
-                        <th>Created</th>
+                        <th>Number of Months</th>
+                        <th>Interest Rate (%)</th>
+                        <th>Penalty Rate (%)</th>
+                
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($groups as $group)
+                    @foreach($plans as $plan)
                         <tr>
-                            <td>{{ $group->id }}</td>
-                            <td>{{ $group->name }}</td>
-                            <td>{{ $group->capacity }}</td>
-                            <td>{{ $group->created_at }}</td>
+                            <td>{{ $plan->id }}</td>
+                            <td>{{ $plan->months }}</td>
+                            <td>{{ $plan->interest_rate }}%</td>
+                            <td>{{ $plan->penalty_rate }}%</td>
+                           
                             <td>
-                              <a href="{{ route('admin.loan-group.show', ['group' => encrypt($group->id)]) }}" class="btn btn-sm btn-info">
-                                <i class="mdi mdi-eye"></i>
+                              {{-- <a href="{{ route('admin.plans.show', ['plan' => encrypt($plan->id)]) }}" class="btn btn-sm btn-info">
+                                <i class="mdi mdi-eye"></i> View
                             </a>
+                             --}}
                                 <a href="#" class="btn btn-sm btn-primary">
                                     <i class="mdi mdi-pencil"></i>
                                 </a>
@@ -57,6 +60,13 @@
                     @endforeach
                 </tbody>
             </table>
+
+            {{-- <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script> --}}
+            <script>
+                $(document).ready(function() {
+                    $('#data-table').DataTable();
+                });
+            </script>
             
             </div>
           </div>
@@ -64,18 +74,20 @@
 
       </div>
     </div>
+
+   
    
     
 @endsection
 
-
 <script>
-    $(document).ready(function () {
-        $('#data-table').DataTable();
-    });
-
+      
+    
     function redirectToCreatePage() {
-        window.location.href = "{{ route('admin.loan-groups.create') }}";
+        window.location.href = "{{ route('admin.plans.create') }}";
     }
 
 </script>
+
+
+

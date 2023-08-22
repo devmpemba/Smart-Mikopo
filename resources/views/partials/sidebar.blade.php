@@ -16,14 +16,21 @@
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{'/home/loan-types'}}">Types</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{'/home/loan-types'}}">Loan Types</a></li>
 
-            <li class="nav-item"> <a class="nav-link" href="{{'/home/loan-groups'}}">Groups</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{{'/home/members'}}">Members</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#">Applications</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#">Disbursment</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{'/home/plans'}}">Loan Plans</a></li>
 
-            <li class="nav-item"> <a class="nav-link" href="#">Payments</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="{{'/home/loan-groups'}}">Loan Groups</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="{{'/home/members'}}">Members</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="{{'/home/apply-loan'}}">Apply Loan</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Disbursment</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Payments</a></li>
+
           </ul>
         </div>
       </li>

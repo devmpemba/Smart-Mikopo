@@ -28,6 +28,12 @@ class LoanGroupsController extends Controller
         return view('admin.loan-group.create');
     }
 
+    public function show(Groups $group): View
+    {
+        
+        return view('admin.loan-group.show', compact('group'));
+    }
+
     public function store(LoanGroupsRequest $request): RedirectResponse
     {
         Groups::create($request->validated());
