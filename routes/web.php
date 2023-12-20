@@ -19,6 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login'); // Redirect to login page
+})->name('logout');
+
 
 Route::middleware(['auth'])->group(function () {
 
@@ -31,10 +36,10 @@ Route::post('/admin/loan-groups/store', [App\Http\Controllers\Admin\LoanGroupsCo
 Route::get('/admin/loan-groups/show/{group}', [App\Http\Controllers\Admin\LoanGroupsController::class, 'show'])->name('admin.loan-group.show');
 
 //loan plans
-Route::get('/home/plans', [App\Http\Controllers\PlansController::class, 'index'])->name('admin.plans.index');
-Route::get('/admin/plans/create', [App\Http\Controllers\PlansController::class, 'create'])->name('admin.plans.create');
-Route::post('/admin/plans/store', [App\Http\Controllers\PlansController::class, 'store'])->name('admin.plans.store');
-Route::get('/admin/plans/show/{plans}', [App\Http\Controllers\PlansController::class, 'show'])->name('admin.plans.show');
+Route::get('/home/loan-plans', [App\Http\Controllers\PlansController::class, 'index'])->name('admin.plans.index');
+Route::get('/admin/loan-plans/create', [App\Http\Controllers\PlansController::class, 'create'])->name('admin.plans.create');
+Route::post('/admin/loan-plans/store', [App\Http\Controllers\PlansController::class, 'store'])->name('admin.plans.store');
+Route::get('/admin/loan-plans/show/{plans}', [App\Http\Controllers\PlansController::class, 'show'])->name('admin.plans.show');
 
 
 

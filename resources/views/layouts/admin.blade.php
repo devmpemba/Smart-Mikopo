@@ -1,101 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <!-- Required meta tags -->
+
+<head>
+    <title>SMART MIKOPO - Loans Management System</title>
+ 
+    <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard | SMART MIKOPO</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('template/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('template/assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('template/assets/vendors/css/vendor.bundle.base.css') }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{ asset('template/assets/vendors/font-awesome/css/font-awesome.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('template/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('template/assets/css/style.css') }}">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ asset('template/assets/images/favicon.png') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Smart Mikopo is Loan Management System that helps small microfinance to manage loans disbursment and payments" />
+    <meta name="keywords" content="loans, smart loans, smart mikopo, mikopo"/>
+    <meta name="author" content="CodedThemes"/>
 
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-  <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/2.3.1/css/searchPanes.dataTables.min.css">
 
+    <!-- Favicon icon -->
+    <link rel="icon" href=" {{ asset('admin/images/favicon.ico') }}" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="{{ asset('admin/fonts/fontawesome/css/fontawesome-all.min.css') }}">
+    <!-- animation css -->
+    <link rel="stylesheet" href="{{ asset('admin/plugins/animation/css/animate.min.css') }}">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+
+</head>
 
 
-  </head>
-
-
-
-  <body>
-    <div class="container-scroller">
-      {{-- <div class="row p-0 m-0 proBanner" id="proBanner">
-        <div class="col-md-12 p-0 m-0">
-          <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-            <div class="ps-lg-1">
-              <div class="d-flex align-items-center justify-content-between">
-                <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                <a href="https://www.bootstrapdash.com/product/connect-plus-bootstrap-admin-template/?utm_source=organic&utm_medium=banner&utm_campaign=buynow_demo" target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
-              </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <a href="https://www.bootstrapdash.com/product/connect-plus-bootstrap-admin-template/"><i class="mdi mdi-home me-3 text-white"></i></a>
-              <button id="bannerClose" class="btn border-0 p-0">
-                <i class="mdi mdi-close text-white me-0"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> --}}
-
-@include('partials.navbar')
-
-<div class="container-fluid page-body-wrapper">
-
-
-    @include('partials.sidebar')
-
-
- @yield('content')
-
-  <!-- partial:partials/_footer.html -->
-  <footer class="footer">
-    <div class="footer-inner-wraper">
-      <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
-        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="#" target="_blank">SMART MIKOPO </a>2023</span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Developed by <a href="#" target="_blank">Mpemba Technologies Ltd</a></span>
+<body>
+  <!-- [ Pre-loader ] start -->
+  <div class="loader-bg">
+      <div class="loader-track">
+          <div class="loader-fill"></div>
       </div>
-    </div>
-  </footer>
-  <!-- partial -->
-</div>
-<!-- main-panel ends -->
-</div>
-<!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
+  </div>
 
+  @include('layouts.nav')
 
-  <!-- plugins:js -->
-  <script src="{{ asset('template/assets/vendors/js/vendor.bundle.base.js') }}"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <script src="{{ asset('template/assets/vendors/chart.js/Chart.min.js') }}"></script>
-  <script src="{{ asset('template/assets/vendors/jquery-circle-progress/js/circle-progress.min.js') }}"></script>
-  <script src="{{ asset('template/assets/js/jquery.cookie.js" type="text/javascript') }}"></script>
-  <!-- End plugin js for this page -->
-  <!-- inject:js -->
-  <script src="{{ asset('template/assets/js/off-canvas.js') }}"></script>
-  <script src="{{ asset('template/assets/js/hoverable-collapse.js') }}"></script>
-  <script src="{{ asset('template/assets/js/misc.js') }}"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page -->
-  <script src="{{ asset('template/assets/js/dashboard.js') }}"></script>
-  <!-- End custom js for this page -->
+  @include('layouts.header')
+
+  @yield('content')
+
+  <script src="{{ asset('admin/js/vendor-all.min.js') }}"></script>
+	<script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/pcoded.min.js') }}"></script>
+
+     <!-- Include required JS -->
+     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> --}}
+ 
+
 </body>
 </html>

@@ -2,6 +2,11 @@
 
 @section('content')
 
+<div class="pcoded-main-container">
+	<div class="pcoded-wrapper">
+		<div class="pcoded-content">
+			<div class="pcoded-inner-content">
+
 <div class="container-fluid">
 	<div class="col-lg-12">
 		<div class="card">
@@ -38,6 +43,11 @@
                         
 					</tbody>
 				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
 			</div>
 		</div>
 	</div>

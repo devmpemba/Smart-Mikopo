@@ -2,6 +2,11 @@
 
 @section('content')
 
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+      <div class="pcoded-content">
+          <div class="pcoded-inner-content">
+
    <!-- partial -->
    <div class="main-panel">
     <div class="content-wrapper">
@@ -77,8 +82,13 @@
 
    
    
-    
-@endsection
+   </div>
+          </div>
+      </div>
+  </div>
+
+
+    @endsection
 
 <script>
       

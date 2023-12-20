@@ -2,102 +2,201 @@
 
 @section('content')
 
-<div class="main-panel">
-    <div class="content-wrapper">
-      <div class="d-xl-flex justify-content-between align-items-start">
-        <h2 class="text-dark font-weight-bold mb-2"> Overview dashboard </h2>
-        
-        <div class="d-sm-flex justify-content-xl-between align-items-center mb-2">
-          <div class="btn-group bg-white p-3" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-link text-gray py-0 border-right">7 Days</button>
-            <button type="button" class="btn btn-link text-dark py-0 border-right">1 Month</button>
-            <button type="button" class="btn btn-link text-gray py-0">3 Month</button>
-          </div>
-          <div class="dropdown ms-0 ml-md-4 mt-2 mt-lg-0">
-            <button class="btn bg-white dropdown-toggle p-3 d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-calendar me-1"></i>24 Mar 2019 - 24 Mar 2019 </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
-              <h6 class="dropdown-header">Settings</h6>
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border {">
-            <ul class="nav nav-tabs tab-transparent" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link" id="home-tab" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">All Data</a>
-              </li>
-             
-            </ul>
-            <div class="d-md-block d-none">
-              <a href="#" class="text-light p-1"><i class="mdi mdi-view-dashboard"></i></a>
-              <a href="#" class="text-light p-1"><i class="mdi mdi-dots-vertical"></i></a>
-            </div>
-          </div>
-          <div class="tab-content tab-transparent-content">
-            <div class="tab-pane fade show active" id="business-1" role="tabpanel" aria-labelledby="business-tab">
-              <div class="row">
-                <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="mb-2 text-dark font-weight-normal">Total Groups</h5>
-                      <h2 class="mb-4 text-dark font-weight-bold">{{ $groups }}</h2>
-                      <div class="dashboard-progress dashboard-progress-1 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-lightbulb icon-md absolute-center text-dark"></i></div>
-                      <p class="mt-4 mb-0">Registered</p>
-                      <h3 class="mb-0 font-weight-bold mt-2 text-dark">5%</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="mb-2 text-dark font-weight-normal">Members</h5>
-                      <h2 class="mb-4 text-dark font-weight-bold">{{ $members }}</h2>
-                      <div class="dashboard-progress dashboard-progress-2 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-account-circle icon-md absolute-center text-dark"></i></div>
-                      <p class="mt-4 mb-0">Increased since yesterday</p>
-                      <h3 class="mb-0 font-weight-bold mt-2 text-dark">50%</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3  col-lg-6 col-sm-6 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="mb-2 text-dark font-weight-normal">Pending Loans</h5>
-                      <h2 class="mb-4 text-dark font-weight-bold">100,38</h2>
-                      <div class="dashboard-progress dashboard-progress-3 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-eye icon-md absolute-center text-dark"></i></div>
-                      <p class="mt-4 mb-0">Increased since yesterday</p>
-                      <h3 class="mb-0 font-weight-bold mt-2 text-dark">35%</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h5 class="mb-2 text-dark font-weight-normal">Completed Loans</h5>
-                      <h2 class="mb-4 text-dark font-weight-bold">4250k</h2>
-                      <div class="dashboard-progress dashboard-progress-4 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-cube icon-md absolute-center text-dark"></i></div>
-                      <p class="mt-4 mb-0">Decreased since yesterday</p>
-                      <h3 class="mb-0 font-weight-bold mt-2 text-dark">25%</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- content-wrapper ends -->
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+      <div class="pcoded-content">
+          <div class="pcoded-inner-content">
+              <!-- [ breadcrumb ] start -->
 
-    
-   
-    
+              <!-- [ breadcrumb ] end -->
+              <div class="main-body">
+                  <div class="page-wrapper">
+                      <!-- [ Main Content ] start -->
+                      <div class="row">
+                          <!--[ daily sales section ] start-->
+                          <div class="col-md-6 col-xl-4">
+                              <div class="card daily-sales">
+                                  <div class="card-block">
+                                      <h6 class="mb-4">Pending Loans</h6>
+                                      <div class="row d-flex align-items-center">
+                                          <div class="col-9">
+                                              <h3 class="f-w-300 d-flex align-items-center m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>TSh 2,400,000</h3>
+                                          </div>
+
+                                          <div class="col-3 text-right">
+                                              <p class="m-b-0">67%</p>
+                                          </div>
+                                      </div>
+                                      <div class="progress m-t-30" style="height: 7px;">
+                                          <div class="progress-bar progress-c-theme" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--[ daily sales section ] end-->
+                          <!--[ Monthly  sales section ] starts-->
+                          <div class="col-md-6 col-xl-4">
+                              <div class="card Monthly-sales">
+                                  <div class="card-block">
+                                      <h6 class="mb-4">Approved Loans</h6>
+                                      <div class="row d-flex align-items-center">
+                                          <div class="col-9">
+                                              <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-down text-c-red f-30 m-r-10"></i>TSh 4,500,000</h3>
+                                          </div>
+                                          <div class="col-3 text-right">
+                                              <p class="m-b-0">36%</p>
+                                          </div>
+                                      </div>
+                                      <div class="progress m-t-30" style="height: 7px;">
+                                          <div class="progress-bar progress-c-theme2" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--[ Monthly  sales section ] end-->
+                          <!--[ year  sales section ] starts-->
+                          <div class="col-md-12 col-xl-4">
+                              <div class="card yearly-sales">
+                                  <div class="card-block">
+                                      <h6 class="mb-4">Amount Collected</h6>
+                                      <div class="row d-flex align-items-center">
+                                          <div class="col-9">
+                                              <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>TSh 890,000</h3>
+                                          </div>
+                                          <div class="col-3 text-right">
+                                              <p class="m-b-0">80%</p>
+                                          </div>
+                                      </div>
+                                      <div class="progress m-t-30" style="height: 7px;">
+                                          <div class="progress-bar progress-c-theme" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--[ year  sales section ] end-->
+                          <!--[ Recent Users ] start-->
+                          <div class="col-xl-8 col-md-6">
+                              <div class="card Recent-Users">
+                                  <div class="card-header">
+                                      <h5>Recent Applications</h5>
+                                  </div>
+                                  <div class="card-block px-0 py-3">
+                                      <div class="table-responsive">
+                                          <table class="table table-hover">
+                                              <tbody>
+                                                  <tr class="unread">
+                                                      <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-1.jpg" alt="activity-user"></td>
+                                                      <td>
+                                                          <h6 class="mb-1">Isabella Christensen</h6>
+                                                          <p class="m-0">Lorem Ipsum is simply…</p>
+                                                      </td>
+                                                      <td>
+                                                          <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>11 MAY 12:56</h6>
+                                                      </td>
+                                                      <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!" class="label theme-bg text-white f-12">Approve</a></td>
+                                                  </tr>
+                                                  <tr class="unread">
+                                                      <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-2.jpg" alt="activity-user"></td>
+                                                      <td>
+                                                          <h6 class="mb-1">Mathilde Andersen</h6>
+                                                          <p class="m-0">Lorem Ipsum is simply text of…</p>
+                                                      </td>
+                                                      <td>
+                                                          <h6 class="text-muted"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>11 MAY 10:35</h6>
+                                                      </td>
+                                                      <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!" class="label theme-bg text-white f-12">Approve</a></td>
+                                                  </tr>
+                                                  <tr class="unread">
+                                                      <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-3.jpg" alt="activity-user"></td>
+                                                      <td>
+                                                          <h6 class="mb-1">Karla Sorensen</h6>
+                                                          <p class="m-0">Lorem Ipsum is simply…</p>
+                                                      </td>
+                                                      <td>
+                                                          <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>9 MAY 17:38</h6>
+                                                      </td>
+                                                      <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!" class="label theme-bg text-white f-12">Approve</a></td>
+                                                  </tr>
+                                                  <tr class="unread">
+                                                      <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-1.jpg" alt="activity-user"></td>
+                                                      <td>
+                                                          <h6 class="mb-1">Ida Jorgensen</h6>
+                                                          <p class="m-0">Lorem Ipsum is simply text of…</p>
+                                                      </td>
+                                                      <td>
+                                                          <h6 class="text-muted f-w-300"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>19 MAY 12:56</h6>
+                                                      </td>
+                                                      <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!" class="label theme-bg text-white f-12">Approve</a></td>
+                                                  </tr>
+                                                  <tr class="unread">
+                                                      <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-2.jpg" alt="activity-user"></td>
+                                                      <td>
+                                                          <h6 class="mb-1">Albert Andersen</h6>
+                                                          <p class="m-0">Lorem Ipsum is simply dummy…</p>
+                                                      </td>
+                                                      <td>
+                                                          <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>21 July 12:56</h6>
+                                                      </td>
+                                                      <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!" class="label theme-bg text-white f-12">Approve</a></td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--[ Recent Users ] end-->
+
+                          <!-- [ statistics year chart ] start -->
+                          <div class="col-xl-4 col-md-6">
+                              <div class="card card-event">
+                                  <div class="card-block">
+                                      <div class="row align-items-center justify-content-center">
+                                          <div class="col">
+                                              <h5 class="m-0">Upcoming Event</h5>
+                                          </div>
+                                          <div class="col-auto">
+                                              <label class="label theme-bg2 text-white f-14 f-w-400 float-right">34%</label>
+                                          </div>
+                                      </div>
+                                      <h2 class="mt-3 f-w-300">45<sub class="text-muted f-14">Competitors</sub></h2>
+                                      <h6 class="text-muted mt-4 mb-0">You can participate in event </h6>
+                                      <i class="fab fa-angellist text-c-purple f-50"></i>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-block border-bottom">
+                                      <div class="row d-flex align-items-center">
+                                          <div class="col-auto">
+                                              <i class="feather icon-zap f-30 text-c-green"></i>
+                                          </div>
+                                          <div class="col">
+                                              <h3 class="f-w-300">235</h3>
+                                              <span class="d-block text-uppercase">TOTAL IDEAS</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="card-block">
+                                      <div class="row d-flex align-items-center">
+                                          <div class="col-auto">
+                                              <i class="feather icon-map-pin f-30 text-c-blue"></i>
+                                          </div>
+                                          <div class="col">
+                                              <h3 class="f-w-300">26</h3>
+                                              <span class="d-block text-uppercase">TOTAL LOCATIONS</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        
+                      </div>
+                      <!-- [ Main Content ] end -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 @endsection
 
