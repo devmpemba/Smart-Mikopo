@@ -15,4 +15,9 @@ class LoansController extends Controller
         
         return view('admin.apply-loan.index');
     }
+
+    public function create(): View
+    {
+        return view('admin.apply-loan.create');
+    }
 }

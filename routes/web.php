@@ -58,7 +58,7 @@ Route::post('/admin/loan-types/store', [App\Http\Controllers\LoanTypesController
 
 //apply loan
 Route::get('/home/apply-loan', [App\Http\Controllers\LoansController::class, 'index'])->name('admin.apply-loan.index');
-//Route::get('/admin/loans/create', [App\Http\Controllers\LoansController::class, 'create'])->name('admin.loans.create');
+Route::get('/admin/apply-loan/create', [App\Http\Controllers\LoansController::class, 'create'])->name('admin.apply-loan.create');
 //Route::post('/admin/loans/store', [App\Http\Controllers\LoansController::class, 'store'])->name('admin.loans.store');
 
 

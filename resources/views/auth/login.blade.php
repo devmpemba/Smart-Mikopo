@@ -20,7 +20,7 @@
 
                     <h3 class="mb-4">Login</h3>
 
-                    <form {{ route('login') }}" method="POST">
+                    <form action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="input-group mb-3">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control" placeholder="Email Address">

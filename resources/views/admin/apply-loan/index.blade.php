@@ -13,7 +13,7 @@
 			<div class="card-header">
 				<large class="card-title">
 					<b>Loan Applications List</b>
-					<button class="btn btn-primary btn-sm btn-block col-md-2 float-right" type="button" id="new_application"><i class="fa fa-plus"></i> Create New Application</button>
+					<button class="btn btn-primary btn-sm btn-block col-md-2 float-right" type="button" id="new_application" onclick="redirectToCreatePage()"><i class="fa fa-plus"></i> Create New Application</button>
 				</large>
 				
 			</div>
@@ -54,3 +54,14 @@
 </div>
     
 @endsection
+
+<script>
+    $(document).ready(function () {
+        $('#data-table').DataTable();
+    });
+
+    function redirectToCreatePage() {
+        window.location.href = "{{ route('admin.apply-loan.create') }}";
+    }
+
+</script>
