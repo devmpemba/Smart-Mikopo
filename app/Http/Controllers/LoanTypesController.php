@@ -19,7 +19,14 @@ class LoanTypesController extends Controller
     {
         $loans = LoanTypes::all();
 
-        return view('admin.loan-types.index',compact('loans'));
+        // return response()->json([
+        //     'status' => 200,
+        //     'loans' =>  $loans
+        // ]);
+
+       // return 'Loan Types API';
+
+       return view('admin.loan-types.index',compact('loans'));
     }
 
     public function create(): View

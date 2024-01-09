@@ -13,7 +13,7 @@
 			<div class="card-header">
 				<large class="card-title">
 					<b>All Loan Applications</b>
-					<button class="btn btn-primary btn-sm btn-block col-md-2 float-right" type="button" onclick="redirectToCreatePage()"><i class="fa fa-plus"></i>Apply Loan</button>
+					<button class="btn btn-primary btn-sm btn-block col-md-2 float-right" type="button" onclick="redirectToCreatePage()" onclick="redirectToCreatePage()"><i class="fa fa-plus"></i>Apply Loan</button>
 				</large>
 				
 			</div>

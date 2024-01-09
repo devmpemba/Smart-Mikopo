@@ -19,7 +19,6 @@ class PlansController extends Controller
     public function index(): View
     {
         $plans = Plans::all();
-
         return view('admin.plans.index',compact('plans'));
     }
 
