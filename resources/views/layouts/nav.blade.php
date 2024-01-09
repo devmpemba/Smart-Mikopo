@@ -1,7 +1,7 @@
 <nav class="pcoded-navbar">
     <div class="navbar-wrapper">
         <div class="navbar-brand header-logo">
-            <a href="index.html" class="b-brand">
+            <a href="{{'/'}}" class="b-brand">
                 <div class="b-bg">
                     <i class="feather icon-trending-up"></i>
                 </div>
@@ -26,6 +26,13 @@
 
                 <li class="nav-item {{ request()->is('home/apply-loan') ? 'active' : '' }}">
                     <a href="{{ url('/home/apply-loan') }}" class="nav-link ">
+                        <span class="pcoded-micon"><i class="feather icon-file-text"></i></span>
+                        <span class="pcoded-mtext">All Applications</span>
+                    </a>
+                </li>
+
+                <li class="nav-item {{ request()->is('home/apply-loan/create') ? 'active' : '' }}">
+                    <a href="{{ url('/home/apply-loan/create') }}" class="nav-link ">
                         <span class="pcoded-micon"><i class="feather icon-file-text"></i></span>
                         <span class="pcoded-mtext">Apply Loan</span>
                     </a>
@@ -105,7 +112,7 @@
                 </li>
 
                 <li class="nav-item pcoded-menu-caption">
-                    <label>REPORTS</label>
+                    <label>GENERAL REPORTS</label>
                 </li>
                 <li class="nav-item"><a href="javascript:" class="nav-link {{ request()->is('daily-reports') ? 'active' : '' }}">
                         <span class="pcoded-micon"><i class="feather icon-power"></i></span>

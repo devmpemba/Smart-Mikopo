@@ -20,7 +20,7 @@
 
                     <h3 class="mb-4">Login</h3>
 
-                    <form {{ route('login') }}" method="POST">
+                    <form action ="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="input-group mb-3">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control" placeholder="Email Address">
@@ -46,7 +46,7 @@
                                 <label for="checkbox-fill-a1" class="cr">Remember Me?</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg shadow-2 mb-12"> {{ __('Login') }}</button>
+                        <button type="submit" class="btn btn-primary shadow-2 mb-12"> {{ __('Login') }}</button>
                         {{-- <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p> --}}
                         {{-- <p class="mb-0 text-muted">Don’t have an account? <a href="{{'/register'}}">Signup</a></p> --}}
 
